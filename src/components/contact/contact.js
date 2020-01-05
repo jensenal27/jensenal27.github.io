@@ -78,7 +78,7 @@ const Contact = ({inView}) => {
         const isValid = validate();
         if (isValid) {
             // setIsSent(true);
-            fetch('http://localhost:3000/send', {
+            fetch('https://agile-plains-44092.herokuapp.com/send', {
                 method: 'post',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({

@@ -172,7 +172,7 @@
     .wrap{
         grid-template-columns: 50% 50%;
         grid-template-rows: 50% 50%;
-        height: 60%;
+        height: 70%;
         align-self: center;
     }
     .exampleleftwrap{
@@ -262,7 +262,7 @@
     }
     .example{
         height: 120px;
-        width: 234px;
+        width: 250px;
     }
     .exampleimage{
         height: 120px;

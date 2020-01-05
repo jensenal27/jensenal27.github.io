@@ -43,7 +43,7 @@ const Resume = ({inView}) => {
     })
 
     const onDownload = () => {
-        window.open('http://localhost:3000/download');
+        window.open('https://agile-plains-44092.herokuapp.com/download');
     }
 
     return (
