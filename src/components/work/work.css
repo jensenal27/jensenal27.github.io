@@ -12,16 +12,19 @@
     width: 100%;
     height: 100%;
     grid-column: 1/2;
-    grid-row: 1/2;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 50% 50%;
+}
+.examplemidwrap{
+    width: 100%;
+    height: 100%;
+    grid-column: 2/3;
 }
 .examplerightwrap{
     width: 100%;
     height: 100%;
     grid-column: 2/3;
-    grid-row: 1/2;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 50% 50%;
@@ -59,23 +62,23 @@
 }
 #imageone{
     background: url('../../images/work1.jpg') left top;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 #imagetwo{
     background: url('../../images/work2.jpg') left top;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 #imagethree{
     background: url('../../images/Slide6.JPG') left top;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 #imagefour{
     background: url('../../images/work41.jpg') left top;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 .container_dark #imagefour{
     background: url('../../images/work42.jpg') left top;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 .exampletitle{
     grid-row: 2/3;
@@ -176,7 +179,6 @@
 @media all and (max-width: 768px) {
     .wrap{
         grid-template-rows: 50% 50%;
-        grid-template-columns: 50% 50%;
         height: 60%;
         align-self: center;
     }
@@ -251,15 +253,15 @@
     }
     #imagethree{
         background: url('../../images/Slide5.JPG') center center;
-        background-size: 100% 100%;
+        background-size: cover;
     }
     #imagefour{
         background: url('../../images/work43.jpg') center top;
-        background-size: 100% 100%;
+        background-size: cover;
     }
     .container_dark #imagefour{
         background: url('../../images/work44.jpg') center top;
-        background-size: 100% 100%;
+        background-size: cover;
     }
 }
 @media all and (max-width: 480px) {

@@ -133,6 +133,7 @@ input:focus{
 #invmessage{
     grid-column: 2/3;
     grid-row: 3/4;
+    z-index: 100;
 }
 #phone{
     grid-column: 2/3;
