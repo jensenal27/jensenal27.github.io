@@ -260,6 +260,12 @@
     .exampletitle{
         font-size: 1rem;
     }
+    .example{
+        height: 150px;
+    }
+    .exampleimage{
+        height: 150px;
+    }
     .exampleinfo{
         font-size: .7rem;
         display: none;
