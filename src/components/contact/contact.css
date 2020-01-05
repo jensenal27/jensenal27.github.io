@@ -1,0 +1,267 @@
+.contactcontainer{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    align-self: center;
+    justify-self: center;
+    width: 60%;
+    height: 60%;
+    display: grid;
+}
+.contactwrap{
+    width: 100%;
+    height: 100%;
+}
+.contactform{
+    display: grid;
+    grid-template-columns: 4% 46% 46% 4%;
+}
+.contactsentform{
+    grid-row: 1/2;
+    grid-column: 2/4;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    font-size: 3.75rem;
+    color: #d2dae2;
+    background-color: rgba(30, 39, 46, .9);
+    text-align: center;
+    align-items: center;
+    transition: .75s ease;
+}
+.contacttitle{
+    font-family: 'oswald';
+    font-size: 3.75rem;
+    font-weight: 600;
+    grid-column: 1/3;
+    align-self: center;
+}
+.contactsubtitle{
+    font-family: 'oswald';
+    font-size: 1.5rem;
+    font-weight: 400;
+    grid-column: 3/5;
+    align-self: center;
+    justify-self: end;
+}
+form{
+    grid-column: 2/4;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, 50%);
+    grid-column-gap: 20px;
+    grid-template-rows: 20% 20% 60%;
+}
+input{
+    justify-self: center;
+    width: 100%;
+    font-size: 1.5rem;
+    background-color: #1e272e;
+    border: 2px solid #d2dae2;
+    color: #d2dae2;
+    margin: 10px 0px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-family: 'muli';
+}
+input:focus{
+    outline: none;
+    border: 2px solid #ef5777;
+}
+#name{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#company{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+#email{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.invalid{
+    width: 10%;
+    justify-self: end;
+    font-size: 1rem;
+    background-color: rgba(239, 87, 119, .75);
+    border: 2px solid #d2dae2;
+    border-left: none;
+    margin: 10px 0px;
+    padding: 5px 10px;
+    color: #d2dae2;
+    font-family: 'muli';
+    font-weight: 800;
+    opacity: 0;
+    transition: .5s ease;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+.invalid-show{
+    width: 10%;
+    justify-self: end;
+    font-size: 1rem;
+    background-color: rgba(239, 87, 119, .75);
+    border: 2px solid #d2dae2;
+    border-radius: 0 8px 8px 0;
+    border-left: none;
+    margin: 10px 0px;
+    padding: 5px 10px;
+    color: #d2dae2;
+    font-family: 'muli';
+    font-weight: 800;
+    opacity: 1;
+    transition: .5s ease;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+#invname{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#invcompany{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+#invemail{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+#invmessage{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    height: 90%;
+}
+#phone{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+#message{
+    grid-column: 1/3;
+    grid-row: 3/4;
+    height: 90%;
+    width: 100%;
+    font-size: 1.5rem;
+    background-color: #1e272e;
+    border: 2px solid #d2dae2;
+    color: #d2dae2;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    justify-self: center;
+    resize: none;
+}
+#message:focus{
+    outline: none;
+    border: 2px solid #ef5777;
+}
+.button{
+    grid-column: 1/4;
+    margin-top: 1rem;
+    background-color: #d2dae2;
+    border: 2px solid #d2dae2;
+    color: #1e272e;
+    border-radius: 8px;
+    width: 50%;
+    padding: 10px;
+    justify-self: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.button:hover{
+    background-color: #1e272e;
+    color: #ef5777;
+    cursor: pointer;
+}
+@media all and (max-width: 1224px) {
+    .contactsentform{
+        font-size: 2.25rem;
+    }
+    .contacttitle{
+        font-size: 2.25rem;
+    }
+    .contactsubtitle{
+        font-size: .9rem;
+    }
+}
+@media all and (max-width: 768px) {
+    .contactsubtitle{
+        font-size: .9rem;
+    }
+    .contactcontainer{
+        width: 80%;
+        height: 60%;
+    }
+    form{
+        grid-column: 2/4;
+        grid-auto-flow: row;
+        grid-template-columns: 100%;
+        grid-template-rows: 15% 15% 15% 15% 40%;
+    }
+    input{
+        font-size: 1rem;
+    }
+    #name{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    #company{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    #email{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    #phone{
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    #message{
+        grid-column: 1/2;
+        grid-row: 5/6;
+        font-size: 1rem;
+    }
+    #invname{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    #invcompany{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    #invemail{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    #invmessage{
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+    .button{
+        grid-column: 1/2;
+    }
+}
+@media all and (max-width: 480px) {
+    .contactcontainer{
+        width: 70%;
+        height: 70%;
+    }
+    .contactsentform{
+        font-size: 1.5rem;
+    }
+    .contacttitle{
+        font-size: 1.5rem;
+    }
+    .contactsubtitle{
+        font-size: .6rem;
+    }
+    .button{
+        width: 100%;
+    }
+}
