@@ -62,23 +62,23 @@
 }
 #imageone{
     background: url('../../images/work1.jpg') left top;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 #imagetwo{
     background: url('../../images/work2.jpg') left top;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 #imagethree{
     background: url('../../images/Slide6.JPG') left top;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 #imagefour{
     background: url('../../images/work41.jpg') left top;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 .container_dark #imagefour{
     background: url('../../images/work42.jpg') left top;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 .exampletitle{
     grid-row: 2/3;
@@ -253,15 +253,15 @@
     }
     #imagethree{
         background: url('../../images/Slide5.JPG') center center;
-        background-size: cover;
+        background-size: 100% 100%;
     }
     #imagefour{
         background: url('../../images/work43.jpg') center top;
-        background-size: cover;
+        background-size: 100% 100%;
     }
     .container_dark #imagefour{
         background: url('../../images/work44.jpg') center top;
-        background-size: cover;
+        background-size: 100% 100%;
     }
 }
 @media all and (max-width: 480px) {
