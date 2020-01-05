@@ -70,7 +70,7 @@
     .aboutwrap{
         font-size: 3.5rem;
         grid-template-rows: 2% 10% 10% 20% 58%;
-        height: 60%;
+        height: 80%;
     }
     .abouttitle{
         grid-row: 2/3;
