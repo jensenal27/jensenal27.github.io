@@ -44,32 +44,30 @@
     grid-row: 1/2;
     grid-column: 1/2;
     border-radius: 6px 6px 0 0;
-    max-height: 100%;
     transition: .5s;
 }
 .example:hover .exampleimage{
-    max-height: 50%;
     transition: .5s;
 }
 #imageone{
     background: url('../../images/work1.jpg') left top;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 #imagetwo{
     background: url('../../images/work2.jpg') left top;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 #imagethree{
     background: url('../../images/Slide6.JPG') left top;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 #imagefour{
     background: url('../../images/work41.jpg') left top;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 .container_dark #imagefour{
     background: url('../../images/work42.jpg') left top;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 .exampletitle{
     grid-row: 2/3;
@@ -244,15 +242,15 @@
     }
     #imagethree{
         background: url('../../images/Slide5.JPG') center center;
-        background-size: 100% 100%;
+        background-size: cover;
     }
     #imagefour{
         background: url('../../images/work43.jpg') center top;
-        background-size: 100% 100%;
+        background-size: cover;
     }
     .container_dark #imagefour{
         background: url('../../images/work44.jpg') center top;
-        background-size: 100% 100%;
+        background-size: cover;
     }
 }
 @media all and (max-width: 480px) {
