@@ -338,9 +338,12 @@
 @media all and (max-width: 480px) {
     .resumewrap{
         width: 60%;
-        height: 74%;
+        height: 64%;
         grid-template-columns: 100%;
         grid-template-rows: 5% 30% 65%;
+    }
+    .resumeblock.active{
+        flex-grow: 7;
     }
     .resumeicon svg{
         height: 10px;

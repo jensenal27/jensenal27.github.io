@@ -261,16 +261,13 @@
         font-size: 1rem;
     }
     .example{
-        height: 150px;
+        height: 120px;
+        width: 234px;
     }
     .exampleimage{
-        height: 150px;
+        height: 120px;
     }
     .exampleinfo{
         font-size: .7rem;
-        display: none;
-    }
-    .example:hover .exampleinfo{
-        display: block;
     }
 }
