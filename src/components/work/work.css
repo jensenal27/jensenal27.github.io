@@ -12,19 +12,16 @@
     width: 100%;
     height: 100%;
     grid-column: 1/2;
+    grid-row: 1/2;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 50% 50%;
-}
-.examplemidwrap{
-    width: 100%;
-    height: 100%;
-    grid-column: 2/3;
 }
 .examplerightwrap{
     width: 100%;
     height: 100%;
     grid-column: 2/3;
+    grid-row: 1/2;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 50% 50%;
@@ -179,6 +176,7 @@
 @media all and (max-width: 768px) {
     .wrap{
         grid-template-rows: 50% 50%;
+        grid-template-columns: 50% 50%;
         height: 60%;
         align-self: center;
     }

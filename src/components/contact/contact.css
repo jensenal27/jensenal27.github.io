@@ -133,7 +133,6 @@ input:focus{
 #invmessage{
     grid-column: 2/3;
     grid-row: 3/4;
-    height: 90%;
 }
 #phone{
     grid-column: 2/3;
@@ -142,7 +141,6 @@ input:focus{
 #message{
     grid-column: 1/3;
     grid-row: 3/4;
-    height: 90%;
     width: 100%;
     font-size: 1.5rem;
     background-color: #1e272e;
