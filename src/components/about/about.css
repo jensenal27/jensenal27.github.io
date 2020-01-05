@@ -70,7 +70,6 @@
     .aboutwrap{
         font-size: 3.5rem;
         grid-template-rows: 2% 10% 10% 20% 58%;
-        height: 80%;
     }
     .abouttitle{
         grid-row: 2/3;
@@ -90,6 +89,9 @@
     }
 }
 @media all and (max-width: 480px) {
+    .aboutwrap{
+        height: 88%;
+    }
     .abouttitle{
         grid-row: 2/3;
         grid-column: 1/3;
