@@ -15,12 +15,10 @@
     grid-column: 1/2;
     display: grid;
     justify-self: center;
-    color: #ef5777;
     opacity: 0;
-    cursor: default;
+    transition: .5s;
 }
 #visible{
-    color: #1e272e;
     opacity: 1;
     transition: .5s;
 }

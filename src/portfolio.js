@@ -15,6 +15,7 @@ const Portfolio = () => {
     const slider = document.getElementsByClassName('slide');
 
     const [theme, setTheme] = useState('light');
+    const [showHeader, setShowHeader] = useState(false);
     
     const [refAbout, aboutInView] = useInView({threshold: .8});
     const [refWork, workInView] = useInView({threshold: .8});
@@ -87,10 +88,15 @@ const Portfolio = () => {
         }
     }, []);
 
+    useEffect(() => {
+        setShowHeader(true);
+    }, []);
+
     return (
         <div className = {theme === 'light' ? 'container' : 'container_dark'}>
             <ThemeToggle theme={theme} toggleTheme={toggleTheme}/>
-            <Header 
+            <Header
+            showHeader={showHeader}
             scrollOne={scrollOne} scrollTwo={scrollTwo} scrollThree={scrollThree} scrollFour={scrollFour}
             aboutInView={aboutInView} workInView={workInView} resumeInView={resumeInView} contactInView={contactInView}/>
             <Sidebar 
