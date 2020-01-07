@@ -56,8 +56,8 @@ const Work = ({inView}) => {
                     <div className = 'exampletitle'>Kiosk Event Map</div>
                     <div className = 'exampleinfo'>Developed for the kick off of DC Startup Week 2019 at Booz Allen Hamilton's Innovation Center. Designed to be viewed at fullscreen on a touchscreen monitor rotated 90 degrees (9:16).</div>
                     <div className ='exampleicons'>
-                        <a href='Javascript:;' className='demobutton'><FaEyeSlash/></a>
-                        <a href='Javascript:;' className='gitbutton'><FaGithub/></a>
+                        <div className='demobutton'><FaEyeSlash/></div>
+                        <div className='gitbutton'><FaGithub/></div>
                     </div>
                 </div>
                 <div className='example'>
@@ -65,7 +65,7 @@ const Work = ({inView}) => {
                     <div className = 'exampletitle'>Portfolio Site</div>
                     <div className = 'exampleinfo'>Front end is built with React. Backend is a Node server using Express and Nodemailer for the contact form.</div>
                     <div className ='exampleicons'>
-                        <a href='Javascript:;' className='demobutton'><FaEyeSlash/></a>
+                        <div className='demobutton'><FaEyeSlash/></div>
                         <a href='https://github.com/jensenal27/jensenal27.github.io' target='__blank' className='gitbutton'><FaGithub/></a>
                     </div>
                 </div>

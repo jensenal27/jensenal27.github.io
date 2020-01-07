@@ -104,16 +104,6 @@
     background: #d2dae2;
     transition: .5s ease;
 }
-.exampleicons a{
-    color: #d2dae2;
-    height: 60%;
-    width: 60%;
-    display: grid;
-    align-items: center;
-}
-.container_dark .exampleicons a{
-    color: #1e272e;
-}
 .exampleicons svg{
     height: 100%;
     width: 100%;
@@ -123,11 +113,25 @@
     grid-column: 2/3;
     justify-self: end;
     align-self: center;
+    color: #d2dae2;
+    height: 60%;
+    width: 60%;
+    display: grid;
+    align-items: center;
 }
 .gitbutton{
     grid-column: 3/4;
     justify-self: center;
     align-self: center;
+    color: #d2dae2;
+    height: 60%;
+    width: 60%;
+    display: grid;
+    align-items: center;
+}
+.container_dark .demobutton,
+.container_dark .gitbutton{
+    color: #1e272e;
 }
 .demobutton:hover,
 .gitbutton:hover{
