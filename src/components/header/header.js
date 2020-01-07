@@ -5,7 +5,7 @@ const Header = ({scrollOne, scrollTwo, scrollThree, scrollFour, aboutInView, wor
 
     return (
         <div className = 'header'>
-            <div className='navlogo' id={aboutInView === true ? 'hidden' : ''}>ANDERS JENSEN</div>
+            <div className='navlogo' id={aboutInView === false ? 'visible' : ''}>ANDERS JENSEN</div>
             <div className = 'navwrap'>
             <div className={aboutInView === true ? 'nav activeone' : 'nav'} onClick={scrollOne}>ABOUT</div>
             <div className={workInView === true ? 'nav active' : 'nav'} onClick={scrollTwo}>WORK</div>
