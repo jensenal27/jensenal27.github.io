@@ -106,6 +106,9 @@
         margin: 0px;
         color: black;
     }
+    .aboutfooter{
+        width: 60%;
+    }
     .aboutfooter a{
         color: black;
     }

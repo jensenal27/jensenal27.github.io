@@ -121,7 +121,7 @@ const Contact = ({inView}) => {
                                 <input onChange={onEmailChange} type="email" name="email" id="email" placeholder="Email Address"/>
                                 <div className = {emailError === '' ? 'invalid' : 'invalid-show'} id = 'invemail'>{emailError}</div>
                                 <input onChange={onPhoneChange} type="text" name="phone" id="phone" placeholder="Phone Number"/>
-                                <textarea onChange={onMessageChange} name="message" id="message" placeholder="Type your message here..." rows="4"></textarea>
+                                <textarea onChange={onMessageChange} name="message" id="message" placeholder="Type your message here..." rows="3"></textarea>
                                 <div className = {messageError === '' ? 'invalid' : 'invalid-show'} id = 'invmessage'>{messageError}</div>
                                 <div onClick={onSubmit} className = 'button'>SUBMIT</div>
                             </form>

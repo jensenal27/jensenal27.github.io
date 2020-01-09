@@ -25,20 +25,20 @@
     height: 100%;
     justify-self: center;
     align-self: center;
-    box-shadow: 0 0 10px #1e272e;
+    box-shadow: 0 0 4px #1e272e;
     border-radius: 8px;
     background: #d2dae2;
     display: grid;
     grid-template-rows: 50% 10% 30% 10%;
-    transition: .5s ease-in-out;
+    transition: transform .5s ease-in-out;
 }
 .container_dark .example{
     background: #1e272e;
-    box-shadow: 0 0 10px #d2dae2;
+    box-shadow: 0 0 4px black;
 }
 .example:hover{
-    transform: scale(1.1);
-    transition: .5s ease-in-out;
+    transform: scale(1.02);
+    transition: transform .5s ease-in-out;
 }
 .exampleimage{
     grid-row: 1/2;
@@ -74,6 +74,10 @@
     margin-top: .3rem;
     margin-left: 1rem;
     transition: .5s;
+    color: #1e272e;
+}
+.container_dark .exampletitle{
+    color: #d2dae2;
 }
 .exampleinfo{
     grid-row: 3/4;
@@ -85,6 +89,9 @@
     margin-bottom: 1rem;
     overflow: hidden;
     transition: .5s;
+}
+@keyframes delay-overflow {
+    from { overflow: hidden; }
 }
 .exampleicons{
     grid-row: 4/5;
@@ -164,19 +171,21 @@
 @media all and (min-width: 768px) {
     .exampleimage{
         max-height: 100%;
+        transition: max-height .5s;
     }
     .example:hover .exampletitle{
         transform: translatey(-265%);
-        transition: .5s;
+        transition: transform .5s;
     }
     .example:hover .exampleinfo{
         transform: translatey(-85%);
-        transition: .5s;
+        transition: transform .5s;
         overflow: visible;
+        animation: .5s delay-overflow;
     }
     .example:hover .exampleimage{
         max-height: 50%;
-        transition: .5s;
+        transition: max-height .5s;
     }
 }
 @media all and (max-width: 768px) {

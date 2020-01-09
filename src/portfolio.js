@@ -17,10 +17,10 @@ const Portfolio = () => {
     const [theme, setTheme] = useState('light');
     const [showHeader, setShowHeader] = useState(false);
     
-    const [refAbout, aboutInView] = useInView({threshold: .8});
-    const [refWork, workInView] = useInView({threshold: .8});
-    const [refResume, resumeInView] = useInView({threshold: .8});
-    const [refContact, contactInView] = useInView({threshold: .8});
+    const [refAbout, aboutInView] = useInView({threshold: .5});
+    const [refWork, workInView] = useInView({threshold: .5});
+    const [refResume, resumeInView] = useInView({threshold: .5});
+    const [refContact, contactInView] = useInView({threshold: .5});
 
     const animSliderOne = () => {
         if (workInView === true) {

@@ -2,7 +2,6 @@ import React from 'react';
 import {useTransition, config, animated} from 'react-spring';
 import './work.css';
 import {FaEye} from 'react-icons/fa';
-import {FaEyeSlash} from 'react-icons/fa';
 import {FaGithub} from 'react-icons/fa';
 
 const Work = ({inView}) => {
@@ -32,7 +31,7 @@ const Work = ({inView}) => {
             item && <animated.div key={key} style={props} className = 'exampleleftwrap'>
                 <div className = 'example'>
                     <div className='exampleimage' id='imageone'></div>
-                    <div className = 'exampletitle'>Event Calendar</div>
+                    <a href='https://jensenal27.github.io/event-calendar/' target='__blank' className='exampletitle'>Event Calendar</a>
                     <div className = 'exampleinfo'>Developed for Booz Allen Hamilton's Innovation Center. Built in React and deployed to a Microsoft SharePoint page. Live data is provided by SharePoint REST service. Designed to be viewed at fullscreen on a touchscreen monitor (16:9).</div>
                     <div className ='exampleicons'>
                         <a href='https://jensenal27.github.io/event-calendar/' target='__blank' className='demobutton'><FaEye/></a>
@@ -41,7 +40,7 @@ const Work = ({inView}) => {
                 </div>
                 <div className='example'>
                     <div className='exampleimage' id='imagetwo'></div>
-                    <div className = 'exampletitle'>Mentor Wall</div>
+                    <a href='https://jensenal27.github.io/mentor-wall/' target='__blank' className = 'exampletitle'>Mentor Wall</a>
                     <div className = 'exampleinfo'>Developed for Booz Allen Hamilton's Innovation Center. Built in React and deployed to a Microsoft SharePoint page. Live data is provided by SharePoint REST service. Designed to be viewed at fullscreen on a touchscreen monitor (16:9).</div>
                     <div className ='exampleicons'>
                         <a href='https://jensenal27.github.io/mentor-wall/' target='__blank' className='demobutton'><FaEye/></a>
@@ -56,16 +55,14 @@ const Work = ({inView}) => {
                     <div className = 'exampletitle'>Kiosk Event Map</div>
                     <div className = 'exampleinfo'>Developed for the kick off of DC Startup Week 2019 at Booz Allen Hamilton's Innovation Center. Designed to be viewed at fullscreen on a touchscreen monitor rotated 90 degrees (9:16).</div>
                     <div className ='exampleicons'>
-                        <div className='demobutton'><FaEyeSlash/></div>
                         <div className='gitbutton'><FaGithub/></div>
                     </div>
                 </div>
                 <div className='example'>
                     <div className='exampleimage' id='imagefour'></div>
-                    <div className = 'exampletitle'>Portfolio Site</div>
+                    <a href='https://github.com/jensenal27/jensenal27.github.io' target='__blank' className = 'exampletitle'>Portfolio Site</a>
                     <div className = 'exampleinfo'>Front end is built with React. Backend is a Node server using Express and Nodemailer for the contact form.</div>
                     <div className ='exampleicons'>
-                        <div className='demobutton'><FaEyeSlash/></div>
                         <a href='https://github.com/jensenal27/jensenal27.github.io' target='__blank' className='gitbutton'><FaGithub/></a>
                     </div>
                 </div>
