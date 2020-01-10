@@ -36,6 +36,7 @@
     font-weight: 600;
     grid-column: 1/2;
     align-self: center;
+    margin-left: 40px;
 }
 .contactsubtitle{
     font-family: 'oswald';
@@ -44,134 +45,203 @@
     grid-column: 2/3;
     align-self: center;
     justify-self: end;
-    margin-right: -20px;
+    margin-right: 40px;
 }
 form{
     grid-column: 1/3;
     display: grid;
-    grid-auto-flow: column;
     grid-template-columns: repeat(2, 50%);
-    grid-column-gap: 20px;
-    grid-template-rows: 20% 20% 60%;
+    grid-template-rows: 18% 18% 46% 18%;
+    grid-row-gap: 20px;
+    padding: 20px;
 }
 input{
-    justify-self: center;
     width: 100%;
-    font-size: 1rem;
-    background-color: #1e272e;
-    border: 2px solid #d2dae2;
-    color: #d2dae2;
+    font-size: 1.25rem;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, .6);
+    color: #1e272e;
+    border: none;
+    border-bottom: 3px solid #1e272e;
     margin: 10px 0px;
     padding: 5px 10px;
-    border-radius: 8px;
-    font-family: 'muli';
+    outline: none;
+}
+.container_dark input{
+    background-color: rgba(0, 0, 0, .6);
+    color: #d2dae2;
+    border-bottom: 3px solid #d2dae2;
 }
 input:focus{
     outline: none;
-    border: 2px solid #ef5777;
+    border-bottom: 3px solid #ef5777;
+}
+input ~ label{
+    font-size: 1rem;
+    position: absolute;
+    top: 5%;
+    left: 0;
+    padding: 5px 10px;
+    margin: 10px 0px;
+    transition: top .5s;
+    pointer-events: none;
+    font-weight: 600;
+}
+input:focus ~ label,
+input:valid ~ label{
+    top: -50%;
+    font-size: 1rem;
+    transition: top .5s;
+}
+input:focus ~ label{
+    color: #ef5777;
+}
+.formsection{
+    position: relative;
+    display: grid;
+    margin: 0px 20px;
+}
+#namewrap{
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 #name{
     grid-column: 1/2;
     grid-row: 1/2;
 }
-#company{
+#companywrap{
     grid-column: 2/3;
     grid-row: 1/2;
 }
-#email{
+#company{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#emailwrap{
     grid-column: 1/2;
     grid-row: 2/3;
+}
+#email{
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 .invalid{
     width: 10%;
     justify-self: end;
     font-size: 1rem;
     background-color: rgba(239, 87, 119, .75);
-    border: 2px solid #d2dae2;
-    border-left: none;
+    border: none;
+    border-bottom: 3px solid #1e272e;
     margin: 10px 0px;
     padding: 5px 10px;
     color: #d2dae2;
     font-family: 'muli';
     font-weight: 800;
     opacity: 0;
-    transition: .5s ease;
+    transition: opacity .5s ease;
     display: grid;
     align-content: center;
     justify-content: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    pointer-events: none;
 }
 .invalid-show{
     width: 10%;
     justify-self: end;
     font-size: 1rem;
     background-color: rgba(239, 87, 119, .75);
-    border: 2px solid #d2dae2;
-    border-radius: 0 8px 8px 0;
-    border-left: none;
+    border: none;
+    border-bottom: 3px solid #1e272e;
     margin: 10px 0px;
     padding: 5px 10px;
     color: #d2dae2;
     font-family: 'muli';
     font-weight: 800;
     opacity: 1;
-    transition: .5s ease;
+    transition: opacity .5s ease;
     display: grid;
     align-content: center;
     justify-content: center;
-}
-#invname{
     grid-column: 1/2;
     grid-row: 1/2;
 }
-#invcompany{
-    grid-column: 2/3;
-    grid-row: 1/2;
-}
-#invemail{
-    grid-column: 1/2;
-    grid-row: 2/3;
+.container_dark .invalid,
+.container_dark .invalid-show{
+    border-bottom: 3px solid #d2dae2;
 }
 #invmessage{
-    grid-column: 2/3;
-    grid-row: 3/4;
+    grid-column: 1/3;
+    width: 5%;
     z-index: 100;
 }
-#phone{
+#phonewrap{
     grid-column: 2/3;
     grid-row: 2/3;
+}
+#messagewrap{
+    grid-column: 1/3;
+    grid-row: 3/4;
 }
 #message{
     grid-column: 1/3;
-    grid-row: 3/4;
+    grid-row: 1/2;
     width: 100%;
-    font-size: 1rem;
-    background-color: #1e272e;
-    border: 2px solid #d2dae2;
-    color: #d2dae2;
-    margin: 10px;
+    font-size: 1.25rem;
+    background-color: rgba(255, 255, 255, .6);
+    border: none;
+    border-bottom: 3px solid #1e272e;
+    color: #1e272e;
     padding: 10px;
-    border-radius: 8px;
-    justify-self: center;
     resize: none;
+    font-weight: 600;
+    margin: 10px 0px;
+    padding: 5px 10px;
+    outline: none;
+}
+.container_dark #message{
+    background-color: rgba(0, 0, 0, .6);
+    color: #d2dae2;
+    border-bottom: 3px solid #d2dae2;
 }
 #message:focus{
     outline: none;
-    border: 2px solid #ef5777;
+    border-bottom: 3px solid #ef5777;
+}
+textarea ~ label{
+    font-size: 1rem;
+    position: absolute;
+    top: 2%;
+    left: 0;
+    padding: 5px 10px;
+    margin: 10px 0px;
+    transition: top .5s;
+    pointer-events: none;
+    font-weight: 600;
+}
+textarea:focus ~ label,
+textarea:valid ~ label{
+    top: -24%;
+    font-size: 1rem;
+    transition: top .5s;
+}
+textarea:focus ~ label{
+    color: #ef5777;
 }
 .button{
     grid-column: 1/4;
-    margin-top: 1rem;
     background-color: #d2dae2;
     border: 2px solid #d2dae2;
     color: #1e272e;
     border-radius: 8px;
-    width: 50%;
+    width: 25%;
     padding: 10px;
     justify-self: center;
     display: grid;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 1rem;
+    font-weight: 600;
 }
 .button:hover{
     background-color: #1e272e;
@@ -194,11 +264,18 @@ input:focus{
         grid-template-columns: 40% 60%;
     }
     .contacttitle{
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+        grid-row: 1/2;
+        grid-column: 1/3;
+        justify-self: center;
+        margin: 0;
     }
     .contactsubtitle{
-        font-size: .8rem;
-        margin-right: 0;
+        font-size: .6rem;
+        grid-row: 2/3;
+        grid-column: 1/3;
+        justify-self: center;
+        margin: 0;
     }
     .contactcontainer{
         width: 80%;
@@ -212,42 +289,29 @@ input:focus{
     input{
         font-size: 1rem;
     }
-    #name{
+    #namewrap{
         grid-column: 1/2;
         grid-row: 1/2;
     }
-    #company{
+    #companywrap{
         grid-column: 1/2;
         grid-row: 2/3;
     }
-    #email{
+    #emailwrap{
         grid-column: 1/2;
         grid-row: 3/4;
     }
-    #phone{
+    #phonewrap{
         grid-column: 1/2;
         grid-row: 4/5;
     }
-    #message{
+    #messagewrap{
         grid-column: 1/2;
         grid-row: 5/6;
         font-size: 1rem;
     }
-    #invname{
-        grid-column: 1/2;
-        grid-row: 1/2;
-    }
-    #invcompany{
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
-    #invemail{
-        grid-column: 1/2;
-        grid-row: 3/4;
-    }
     #invmessage{
-        grid-column: 1/2;
-        grid-row: 5/6;
+        width: 10%;
     }
     .button{
         grid-column: 1/2;
