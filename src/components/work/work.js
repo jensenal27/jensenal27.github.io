@@ -56,10 +56,10 @@ const Work = ({inView}) => {
             item && <animated.div key={key} style={props} className = 'examplerightwrap'>
                 <div className='example'>
                     <div className='exampleimage' id='imagethree'></div>
-                    <div className = 'exampletitle'>Kiosk Event Map</div>
+                    <a href='https://github.com/jensenal27/kiosk-event-map' target='__blank' className = 'exampletitle'>Kiosk Event Map</a>
                     <div className = 'exampleinfo'>Developed for the kick off of DC Startup Week 2019 at Booz Allen Hamilton's Innovation Center. Designed to be viewed at fullscreen on a touchscreen monitor rotated 90 degrees (9:16).</div>
                     <div className ='exampleicons'>
-                        <div className='gitbutton'><FaGithub/></div>
+                        <a href='https://github.com/jensenal27/kiosk-event-map' target='__blank' className='gitbutton'><FaGithub/></a>
                     </div>
                 </div>
                 <div className='example'>
