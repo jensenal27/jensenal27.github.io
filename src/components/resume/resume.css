@@ -73,6 +73,7 @@
     flex-grow: 3;
     transition: .5s ease;
     grid-template-rows: 18% 18% 64%;
+    align-items: center;
 }
 .resumeicon{
     grid-row: 1/3;
