@@ -93,6 +93,7 @@
 @media all and (max-width: 480px) {
     .aboutwrap{
         height: 88%;
+        grid-template-rows: 6% 8% 8% 20% 58%;
     }
     .abouttitle{
         grid-row: 2/3;

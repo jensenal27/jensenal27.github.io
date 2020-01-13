@@ -336,6 +336,8 @@ textarea:focus ~ label{
     .contactcontainer{
         width: 70%;
         height: 50%;
+        align-self: start;
+        margin-top: 150px;
     }
     .contactsentform{
         font-size: 1.5rem;
@@ -353,6 +355,6 @@ textarea:focus ~ label{
         justify-self: center;
     }
     .button{
-        width: 100%;
+        width: 80%;
     }
 }
