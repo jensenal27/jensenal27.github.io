@@ -12,12 +12,12 @@ const Work = ({inView}) => {
         enter: { opacity: 1, transform: 'translatex(0px)' },
         leave: { opacity: 0, transform: 'translatex(-100px)' }
     })
-    // const transitionMid = useTransition(animateWork, null, {
-    //     config: config.gentle,
-    //     from: { opacity: 0 },
-    //     enter: { opacity: 1 },
-    //     leave: { opacity: 0 }
-    // })
+    const transitionMid = useTransition(inView, null, {
+        config: config.gentle,
+        from: { opacity: 0 },
+        enter: { opacity: 1 },
+        leave: { opacity: 0 }
+    })
     const transitionRight = useTransition(inView, null, {
         config: config.gentle,
         from: { opacity: 0, transform: 'translatex(100px)' },
@@ -27,6 +27,10 @@ const Work = ({inView}) => {
 
     return (
         <div className = 'wrap'>
+            {transitionMid.map(({item, key, props}) => 
+            item && <animated.div key={key} style={props} className = 'examplepagetitle'>
+                Projects
+            </animated.div>)}
             {transitionLeft.map(({item, key, props}) => 
             item && <animated.div key={key} style={props} className = 'exampleleftwrap'>
                 <div className = 'example'>

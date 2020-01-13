@@ -111,9 +111,9 @@ const Contact = ({inView}) => {
                         </animated.div>
                     : <animated.div key={key} style={props} className = 'contactwrap'>
                         <div className = 'contactform'>
-                            <div className = 'contacttitle'>CONTACT ME</div>
+                            <div className = 'contacttitle'>Contact Me</div>
                             <div className = 'contactsubtitle'>jensenal27@gmail.com | (804)-335-6054</div>
-                            <form method="POST" action="send" novalidate="novalidate">
+                            <form method="POST" action="send" noValidate="noValidate">
                                 <div className = 'formsection' id='namewrap'>
                                     <input onChange={onNameChange} type="text" name="name" id="name" required/>
                                     <label id='namelabel'>Name</label>

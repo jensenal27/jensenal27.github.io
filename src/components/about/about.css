@@ -17,6 +17,7 @@
     justify-self: end;
     align-self: end;
     margin-right: 20px;
+    text-transform: uppercase;
 }
 .aboutsubtitle{
     align-self: end;
@@ -25,6 +26,7 @@
     grid-column: 2/3;
     grid-row: 1/2;
     margin-left: 20px;
+    text-transform: uppercase;
 }
 .aboutfooter{
     grid-row: 2/3;

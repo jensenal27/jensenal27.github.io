@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {useInView} from "react-intersection-observer";
 import './style.css';
 import Header from './components/header/header';
+import Footer from './components/footer/footer';
 import Sidebar from './components/sidebar/sidebar';
 import ThemeToggle from './components/themetoggle/themetoggle';
 import About from './components/about/about';
@@ -15,12 +16,12 @@ const Portfolio = () => {
     const slider = document.getElementsByClassName('slide');
 
     const [theme, setTheme] = useState('light');
-    const [showHeader, setShowHeader] = useState(false);
+    const [showOnLanding, setShowOnLanding] = useState(false);
     
     const [refAbout, aboutInView] = useInView({threshold: .8});
-    const [refWork, workInView] = useInView({threshold: .5});
-    const [refResume, resumeInView] = useInView({threshold: .5});
-    const [refContact, contactInView] = useInView({threshold: .8});
+    const [refWork, workInView] = useInView({threshold: .45});
+    const [refResume, resumeInView] = useInView({threshold: .45});
+    const [refContact, contactInView] = useInView({threshold: .45});
 
     const animSliderOne = () => {
         if (workInView === true) {
@@ -89,14 +90,15 @@ const Portfolio = () => {
     }, []);
 
     useEffect(() => {
-        setShowHeader(true);
+        setShowOnLanding(true);
     }, []);
 
     return (
         <div className = {theme === 'light' ? 'container' : 'container_dark'}>
             <ThemeToggle theme={theme} toggleTheme={toggleTheme}/>
+            <Footer showOnLanding={showOnLanding} aboutInView={aboutInView}/>
             <Header
-            showHeader={showHeader}
+            showOnLanding={showOnLanding}
             scrollOne={scrollOne} scrollTwo={scrollTwo} scrollThree={scrollThree} scrollFour={scrollFour}
             aboutInView={aboutInView} workInView={workInView} resumeInView={resumeInView} contactInView={contactInView}/>
             <Sidebar 

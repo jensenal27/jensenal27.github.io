@@ -1,0 +1,34 @@
+.footer{
+    position: fixed;
+    bottom: 2%;
+    left: 2%;
+    opacity: 0;
+    transition: .5s;
+}
+.footernav{
+    width: 50px;
+    height: 50px;
+    border: 2px solid #1e272e;
+    border-radius: 50%;
+    background-color: #d2dae2;
+    cursor: pointer;
+    margin: 12px 0 0 0;
+}
+.container_dark .footernav{
+    border: 2px solid #d2dae2;
+    background-color: #1e272e;
+}
+.footernav:active{
+    background-color: #ef5777;
+}
+.footernav svg{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+.footernav a{
+    color: #1e272e;
+}
+.container_dark .footernav a{
+    color: #d2dae2;
+}

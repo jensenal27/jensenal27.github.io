@@ -6,6 +6,7 @@
     display: grid;
     grid-template-columns: 27% 27% 46%;
     align-items: center;
+    text-transform: uppercase;
 }
 .navlogo{
     font-family: 'oswald';

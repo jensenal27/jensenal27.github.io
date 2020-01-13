@@ -7,14 +7,29 @@
     height: 50%;
     display: grid;
     grid-template-columns: 50% 50%;
+    z-index: 2;
+}
+.examplepagetitle{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    font-family: 'oswald';
+    font-size: 3.75rem;
+    font-weight: 600;
+    justify-self: end;
+    align-self: end;
+    margin-bottom: -100px;
+    margin-right: 36px;
+    text-transform: uppercase;
 }
 .exampleleftwrap{
+    grid-row: 1/2;
     grid-column: 1/2;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 50% 50%;
 }
 .examplerightwrap{
+    grid-row: 1/2;
     grid-column: 2/3;
     display: grid;
     grid-auto-flow: column;
@@ -78,6 +93,9 @@
 }
 .container_dark .exampletitle{
     color: #d2dae2;
+}
+.exampletitle:hover{
+    color: #ef5777;
 }
 .exampleinfo{
     grid-row: 3/4;
@@ -195,6 +213,15 @@
         height: 70%;
         align-self: center;
     }
+    .examplepagetitle{
+        grid-column: 1/2;
+        font-family: 'oswald';
+        font-size: 2rem;
+        font-weight: 600;
+        justify-self: start;
+        align-self: start;
+        margin-top: -40px;
+    }
     .exampleleftwrap{
         grid-row: 1/2;
         grid-column: 1/3;
@@ -263,6 +290,9 @@
         justify-self: center;
         width: 40%;
     }
+    .gitbutton{
+        grid-row: 2/3;
+    }
     #imagethree{
         background: url('../../images/Slide5.JPG') center center;
         background-size: cover;
@@ -277,6 +307,11 @@
     }
 }
 @media all and (max-width: 480px) {
+    .examplepagetitle{
+        font-size: 1.5rem;
+        margin-top: -30px;
+        margin-left: 24px;
+    }
     .exampletitle{
         font-size: 1rem;
     }

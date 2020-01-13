@@ -30,9 +30,9 @@ const About = ({inView}) => {
     return (
         <div className = 'aboutwrap'>
             {transitionLeft.map(({item, key, props}) => 
-            item && <animated.div key={key} style={props} className = 'abouttitle'>ANDERS</animated.div>)}
+            item && <animated.div key={key} style={props} className = 'abouttitle'>Anders</animated.div>)}
             {transitionRight.map(({item, key, props}) => 
-            item && <animated.div key={key} style={props} className = 'aboutsubtitle'>JENSEN</animated.div>)}
+            item && <animated.div key={key} style={props} className = 'aboutsubtitle'>Jensen</animated.div>)}
             {transitionMid.map(({item, key, props}) => 
             item && <animated.div key={key} style={props} className = 'aboutfooter'>
                 <a href='https://www.linkedin.com/in/anders-jensen-443295165' target='__blank'><FaLinkedin/></a>

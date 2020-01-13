@@ -30,7 +30,6 @@
     height: 100vh;
     width: 100%;
     display: grid;
-    scroll-snap-align: center;
 }
 #one{
     background: url('./images/bg1.png') no-repeat left center;

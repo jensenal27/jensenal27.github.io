@@ -8,8 +8,6 @@ import {FaReact} from 'react-icons/fa';
 import {IoLogoNodejs} from 'react-icons/io';
 import {FaGithub} from 'react-icons/fa';
 import {FaEllipsisH} from 'react-icons/fa';
-import {FaGithubSquare} from 'react-icons/fa';
-import {FaLinkedin} from 'react-icons/fa';
 
 const Resume = ({inView}) => {
 
@@ -57,9 +55,8 @@ const Resume = ({inView}) => {
             {transitionLeft.map(({item, key, props}) => 
             item && <animated.div key={key} style={props} className = 'resumefirst'>
                 <div className = 'resumeleft'>
-                    <div className = 'resumelinks'>
-                        <a href='https://www.linkedin.com/in/anders-jensen-443295165' target='__blank'><FaLinkedin/></a>
-                        <a href='https://github.com/jensenal27' target='__blank'><FaGithubSquare/></a>
+                    <div className = 'resumepagetitle'>
+                        Resume
                     </div>
                     <div className = 'resumebreak'></div>
                     <div className = 'resumesummary'>
