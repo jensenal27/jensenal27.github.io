@@ -4,22 +4,16 @@
     right: 2%;
     width: 50px;
     height: 50px;
-    border: 2px solid #1e272e;
-    border-radius: 50%;
-    background-color: #d2dae2;
     cursor: pointer;
-}
-.container_dark .themetoggle{
-    border: 2px solid #d2dae2;
-    background-color: #1e272e;
-}
-.themetoggle:active{
-    background-color: #ef5777;
 }
 .themetoggle svg{
     width: 100%;
     height: 100%;
     padding: 12px;
+}
+.themetoggle:hover,
+.themetoggle:active{
+    color: #ef5777;
 }
 @media all and (max-width: 768px) {
     .themetoggle{

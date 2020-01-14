@@ -231,9 +231,8 @@ textarea:focus ~ label{
 }
 .button{
     grid-column: 1/4;
-    background-color: #d2dae2;
-    border: 2px solid #d2dae2;
-    color: #1e272e;
+    background-color: rgba(255, 255, 255, .6);
+    border: 2px solid #1e272e;
     border-radius: 8px;
     width: 25%;
     padding: 10px;
@@ -243,11 +242,19 @@ textarea:focus ~ label{
     justify-content: center;
     font-size: 1rem;
     font-weight: 600;
+    text-transform: uppercase;
+}
+.container_dark .button{
+    background-color: rgba(0, 0, 0, .6);
+    border: 2px solid #d2dae2;
 }
 .button:hover{
-    background-color: #1e272e;
     color: #ef5777;
+    background-color: rgba(255, 255, 255, .4);
     cursor: pointer;
+}
+.container_dark .button:hover{
+    background-color: rgba(0, 0, 0, .4);
 }
 @media all and (max-width: 1350px) {
     .contactsentform{

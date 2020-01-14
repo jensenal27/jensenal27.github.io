@@ -138,7 +138,7 @@ const Contact = ({inView}) => {
                                     <label>Type your message here...</label>
                                     <div className = {messageError === '' ? 'invalid' : 'invalid-show'} id = 'invmessage'>{messageError}</div>
                                 </div>
-                                <div onClick={onSubmit} className = 'button'>SUBMIT</div>
+                                <div onClick={onSubmit} className = 'button'>Submit</div>
                             </form>
                         </div>
                         </animated.div>
