@@ -72,7 +72,7 @@
 .resumeblock.active{
     flex-grow: 3;
     transition: .5s ease;
-    grid-template-rows: 18% 18% 64%;
+    grid-template-rows: 15% 15% 70%;
     align-items: center;
 }
 .resumeicon{
@@ -235,10 +235,10 @@
 }
 @media all and (max-width: 1024px) {
     .resumetitle{
-        font-size: .9rem;
+        font-size: .8rem;
     }
     .resumesubtitle{
-        font-size: .8rem;
+        font-size: .7rem;
     }
     .resumeinfo{
         font-size: .7rem;
@@ -271,15 +271,15 @@
         align-self: start;
     }
     .resumetitle{
-        font-size: .85rem;
-        margin: 0 10px;
-    }
-    .resumesubtitle{
         font-size: .75rem;
         margin: 0 10px;
     }
+    .resumesubtitle{
+        font-size: .65rem;
+        margin: 0 10px;
+    }
     .resumeinfo{
-        font-size: .7rem;
+        font-size: .65rem;
         margin: 0 10px;
     }
     .resumeleft{
