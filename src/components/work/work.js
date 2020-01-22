@@ -36,7 +36,7 @@ const Work = ({inView}) => {
                 <div className = 'example'>
                     <div className='exampleimage' id='imageone'></div>
                     <a href='https://jensenal27.github.io/event-calendar/' target='__blank' className='exampletitle'>Event Calendar</a>
-                    <div className = 'exampleinfo'>Developed for Booz Allen Hamilton's Innovation Center. Built in React and deployed to a Microsoft SharePoint page. Live data is provided by SharePoint REST service. Designed to be viewed at fullscreen on a touchscreen monitor (16:9).</div>
+                    <div className = 'exampleinfo'>Developed for Booz Allen Hamilton's Innovation Center. Built with React and deployed to a Microsoft SharePoint page. Live data is provided by SharePoint REST service. Designed to be viewed at fullscreen on a touchscreen monitor (16:9).</div>
                     <div className ='exampleicons'>
                         <a href='https://jensenal27.github.io/event-calendar/' target='__blank' className='demobutton'><FaEye/></a>
                         <a href='https://github.com/jensenal27/event-calendar/tree/master' target='__blank' className='gitbutton'><FaGithub/></a>
@@ -45,7 +45,7 @@ const Work = ({inView}) => {
                 <div className='example'>
                     <div className='exampleimage' id='imagetwo'></div>
                     <a href='https://jensenal27.github.io/mentor-wall/' target='__blank' className = 'exampletitle'>Mentor Wall</a>
-                    <div className = 'exampleinfo'>Developed for Booz Allen Hamilton's Innovation Center. Built in React and deployed to a Microsoft SharePoint page. Live data is provided by SharePoint REST service. Designed to be viewed at fullscreen on a touchscreen monitor (16:9).</div>
+                    <div className = 'exampleinfo'>Developed for Booz Allen Hamilton's Innovation Center. Built with React and deployed to a Microsoft SharePoint page. Live data is provided by SharePoint REST service. Designed to be viewed at fullscreen on a touchscreen monitor (16:9).</div>
                     <div className ='exampleicons'>
                         <a href='https://jensenal27.github.io/mentor-wall/' target='__blank' className='demobutton'><FaEye/></a>
                         <a href='https://github.com/jensenal27/mentor-wall/tree/master' target='__blank' className='gitbutton'><FaGithub/></a>
