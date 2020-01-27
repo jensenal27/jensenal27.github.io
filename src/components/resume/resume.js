@@ -40,16 +40,12 @@ const Resume = ({inView}) => {
         leave: { opacity: 0, transform: 'translatex(100px)' }
     })
 
-    const onDownload = () => {
-        window.open('https://agile-plains-44092.herokuapp.com/download');
-    }
-
     return (
         <div className = 'resumewrap'>
             {transitionMid.map(({item, key, props}) => 
             item && <animated.div key={key} style={props} className = 'resumeheader'>
                 <div className='resumeheadericons'>
-                    <div className = 'downbutton' onClick={onDownload}>Download</div>
+                    <a href='/AJensenResume.pdf' target='__blank' className = 'downbutton'>Download</a>
                 </div>
             </animated.div>)}
             {transitionLeft.map(({item, key, props}) => 

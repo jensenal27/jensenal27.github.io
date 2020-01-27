@@ -340,6 +340,7 @@ textarea:focus ~ label{
     }
     .button{
         grid-column: 1/2;
+        width: 40%;
     }
 }
 @media all and (max-width: 480px) {
