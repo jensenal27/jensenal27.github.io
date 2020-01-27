@@ -90,7 +90,7 @@ const Resume = ({inView}) => {
                     <div className = 'resumeicon'><FaEllipsisH/></div>
                     <div className = 'resumetitle'>Innovation Center Concierge</div>
                     <div className = 'resumesubtitle'>Booz Allen Hamilton, (January 2018-Present)</div>
-                    <div className = 'resumeinfo'>+ Manage on-site access responsibilites, telecommunication, and organization of physical space including scheduling orders, stocking, and keeping inventory of food and office supplies<br/>+ Complete weekly metrics and create and update PowerPoint dashboard on high level information for leadership<br/>+ Update digital signage with daily events and meetings<br/>+ Create a 3-week outlook in Excel for internal website, send reminders and serve as on-site support, register visitors and issue site badges according to firm policy</div>
+                    <div className = 'resumeinfo'>+ Manage on-site access responsibilites, telecommunication, and organization of physical space including scheduling orders, stocking, and keeping inventory of food and drinks and office supplies<br/>+ Complete weekly metrics and create and update PowerPoint dashboard on high level information for leadership<br/>+ Update digital signage with daily events and meetings<br/>+ Create a 3-week outlook in Excel for internal website, send reminders and serve as on-site support, register visitors and issue site badges according to firm policy</div>
                 </div>
                 <div className = {`resumeblock ${active === 3 ? 'active' : null}`} onClick={() => onJobClick(3)}>
                     <div className = 'resumeicon'><FaEllipsisH/></div>
