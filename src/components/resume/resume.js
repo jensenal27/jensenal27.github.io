@@ -57,7 +57,7 @@ const Resume = ({inView}) => {
                     <div className = 'resumebreak'></div>
                     <div className = 'resumesummary'>
                         <div className = 'resumetitle'>Summary of Experience</div>
-                        <div className = 'resumeinfo'>Experienced Administrative Associate with a demonstrated history of working in the management consulting industry. Skilled in Research, Customer Service, Microsoft Office, and Administrative Assistance. Strong administrative professional with a Bachelor of Arts focused in English Language and Literature from Old Dominion University.</div>
+                        <div className = 'resumeinfo'>Anders is an Administrative Professional with over three years of Facilities Management, Event Logistics Coordination, and Administrative Support experience. Over the last year, he has gained experience in software development, focusing on building web applications with React, and has developed multiple projects for Booz Allen Hamilton's Innovation Center.</div>
                     </div>
                     <div className = 'resumeskillsection'>
                         <div className = 'resumetitle'>Skills</div>
