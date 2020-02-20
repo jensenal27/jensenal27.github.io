@@ -14,6 +14,7 @@ const Contact = ({inView}) => {
     const [emailError, setEmailError] = useState('');
     const [messageError, setMessageError] = useState('');
     const [isSent, setIsSent] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const transition = useTransition(isSent, null, {
         config: config.gentle,
@@ -78,6 +79,7 @@ const Contact = ({inView}) => {
         const isValid = validate();
         if (isValid) {
             // setIsSent(true);
+            setIsLoading(true);
             fetch('https://agile-plains-44092.herokuapp.com/send', {
                 method: 'post',
                 headers: {'Content-Type': 'application/json'},
@@ -91,9 +93,11 @@ const Contact = ({inView}) => {
             })
             .then(function(response) {
                 if (response.status !== 200) {
-                    throw new Error('Not 200 Response')
+                    setIsLoading(false);
+                    throw new Error('Not 200 Response');
                 } else {
-                    setIsSent(true)
+                    setIsLoading(false);
+                    setIsSent(true);
                 }
             }).catch(err => console.log(err));
         }
@@ -138,7 +142,11 @@ const Contact = ({inView}) => {
                                     <label>Type your message here...</label>
                                     <div className = {messageError === '' ? 'invalid' : 'invalid-show'} id = 'invmessage'>{messageError}</div>
                                 </div>
-                                <div onClick={onSubmit} className = 'button'>Submit</div>
+                                <div onClick={onSubmit} className = 'button'>
+                                    <div className = 'buttontext' id = {isLoading === true ? 'loading' : ''}>
+                                        {isLoading === true ? 'Working...' : 'Submit'}
+                                    </div>
+                                </div>
                             </form>
                         </div>
                         </animated.div>

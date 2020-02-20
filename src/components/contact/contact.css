@@ -256,6 +256,23 @@ textarea:focus ~ label{
 .container_dark .button:hover{
     background-color: rgba(0, 0, 0, .4);
 }
+.buttontext{
+    opacity: 1;
+}
+#loading{
+    animation: fade 1.5s infinite;
+}
+@keyframes fade{
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 @media all and (max-width: 1350px) {
     .contactsentform{
         font-size: 2.25rem;
