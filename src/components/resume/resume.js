@@ -82,19 +82,19 @@ const Resume = ({inView}) => {
             item && <animated.div key={key} style={props} className = 'resumesecond'>
                 <div className = {`resumeblock ${active === 1 ? 'active' : null}`} onClick={() => onJobClick(1)}>
                     <div className = 'resumeicon'><FaEllipsisH/></div>
-                    <div className = 'resumetitle'>Workplace Experience Assistant Manager</div>
+                    <div className = 'resumetitle'>Assistant Manager, Workplace Experience</div>
                     <div className = 'resumesubtitle'>Booz Allen Hamilton, (January 2019-Present)</div>
-                    <div className = 'resumeinfo'>+ Act as liaison to CBRE facilities leadership representing Booz Allen Hamilton's first innovation office: The Innovation Center<br/>+ Assist with launch of visitor check in and metrics system through third party vendor<br/>+ Manage quality control by maintaining 100K budget and managing vendor relationships<br/>+ Design, modify, develop, write, and implement software systems to facilitate employee and guest interaction with technology throughout the space</div>
+                    <div className = 'resumeinfo'>+ Design, modify, develop, write, and implement software systems to facilitate employee and guest interaction with technology throughout the space<br/>+ Act as liaison to CBRE facilities leadership representing Booz Allen Hamilton's first innovation office: The Innovation Center<br/>+ Assist with launch of visitor check in and metrics system through third party vendor<br/>+ Manage quality control by maintaining 100K budget and managing vendor relationships</div>
                 </div>
                 <div className = {`resumeblock ${active === 2 ? 'active' : null}`} onClick={() => onJobClick(2)}>
                     <div className = 'resumeicon'><FaEllipsisH/></div>
-                    <div className = 'resumetitle'>Innovation Center Concierge</div>
+                    <div className = 'resumetitle'>Concierge, Innovation Center</div>
                     <div className = 'resumesubtitle'>Booz Allen Hamilton, (January 2018-Present)</div>
                     <div className = 'resumeinfo'>+ Manage on-site access responsibilites, telecommunication, and organization of physical space including scheduling orders, stocking, and keeping inventory of food and drinks and office supplies<br/>+ Complete weekly metrics and create and update PowerPoint dashboard on high level information for leadership<br/>+ Update digital signage with daily events and meetings<br/>+ Create a 3-week outlook in Excel for internal website, send reminders and serve as on-site support, register visitors and issue site badges according to firm policy</div>
                 </div>
                 <div className = {`resumeblock ${active === 3 ? 'active' : null}`} onClick={() => onJobClick(3)}>
                     <div className = 'resumeicon'><FaEllipsisH/></div>
-                    <div className = 'resumetitle'>Conference Center Logistics Coordinator</div>
+                    <div className = 'resumetitle'>Logistics Coordinator, Conference Center</div>
                     <div className = 'resumesubtitle'>Booz Allen Hamilton, (July 2016 - December 2017)</div>
                     <div className = 'resumeinfo'>+ Execute meeting and event logistics and planning in three Conference Center locations<br/>+ Accountable for all meetings and event logistic responsibilities including: audio visual, facilities, and security coordination<br/>+ Analyze and present meeting and event data to leadership<br/>+ Assist with the implementation of new firmwide tool used for booking meeting and event space and workspace<br/>+ Lead information sessions on-site and via teleconference for internal staff during launch</div>
                 </div>
