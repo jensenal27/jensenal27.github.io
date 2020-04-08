@@ -56,7 +56,7 @@ const Work = ({inView}) => {
             item && <animated.div key={key} style={props} className = 'examplerightwrap'>
                 <div className='example'>
                     <div className='exampleimage' id='imagethree'></div>
-                    <a href='/videos/eventspacemap.mp4' target='__blank' className = 'exampletitle'>Kiosk Event Map</a>
+                    <a href='/videos/eventspacemap.mp4' target='__blank' className = 'exampletitle'>Event Space Map</a>
                     <div className = 'exampleinfo'>V2 of an event space map originally developed for the kick off of DC Startup Week 2019 at Booz Allen Hamilton's Innovation Center. Designed to be viewed at fullscreen on a touchscreen monitor rotated 90 degrees (9:16).</div>
                     <div className ='exampleicons'>
                         <a href='/videos/eventspacemap.mp4' target='__blank' className='demobutton'><FaEye/></a>
