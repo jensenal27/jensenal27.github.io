@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import {useTransition, config, animated} from 'react-spring';
 import './contact.css';
 
 const Contact = ({inView}) => {
@@ -15,19 +14,6 @@ const Contact = ({inView}) => {
     const [messageError, setMessageError] = useState('');
     const [isSent, setIsSent] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
-
-    const transition = useTransition(isSent, null, {
-        config: config.gentle,
-        from: { position: 'absolute', opacity: 0, transform: 'translatey(400px)' },
-        enter: { opacity: 1, transform: 'translatey(0px)' },
-        leave: { opacity: 0 }
-    })
-    const transitionTwo = useTransition(inView, null, {
-        config: config.gentle,
-        from: { opacity: 0, transform: 'translatex(-400px)' },
-        enter: { opacity: 1, transform: 'translatex(0px)' },
-        leave: { opacity: 0, transform: 'translatex(-400px)' }
-    })
 
     const onNameChange = (event) => {
         setName(event.target.value);
@@ -78,81 +64,75 @@ const Contact = ({inView}) => {
     const onSubmit = () => {
         const isValid = validate();
         if (isValid) {
-            // setIsSent(true);
-            setIsLoading(true);
-            fetch('https://agile-plains-44092.herokuapp.com/send', {
-                method: 'post',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({
-                    name: name,
-                    company: company,
-                    email: email,
-                    phone: phone,
-                    message: message
-                })
-            })
-            .then(function(response) {
-                if (response.status !== 200) {
-                    setIsLoading(false);
-                    throw new Error('Not 200 Response');
-                } else {
-                    setIsLoading(false);
-                    setIsSent(true);
-                }
-            }).catch(err => console.log(err));
+            setIsSent(true);
+            // setIsLoading(true);
+            // fetch('https://agile-plains-44092.herokuapp.com/send', {
+            //     method: 'post',
+            //     headers: {'Content-Type': 'application/json'},
+            //     body: JSON.stringify({
+            //         name: name,
+            //         company: company,
+            //         email: email,
+            //         phone: phone,
+            //         message: message
+            //     })
+            // })
+            // .then(function(response) {
+            //     if (response.status !== 200) {
+            //         setIsLoading(false);
+            //         throw new Error('Not 200 Response');
+            //     } else {
+            //         setIsLoading(false);
+            //         setIsSent(true);
+            //     }
+            // }).catch(err => console.log(err));
         }
     }
     
     return (
         <>
-        {transitionTwo.map(({item, key, props}) => 
-            item && <animated.div key={key} style={props} className = 'contactcontainer'>
-                {transition.map(({item, key, props}) => 
-                item ? <animated.div key={key} style={props} className = 'contactwrap'>
-                        <div className ='contactsentform'>
-                            Thank You!<br/>Your message has been sent.
-                        </div>
-                        </animated.div>
-                    : <animated.div key={key} style={props} className = 'contactwrap'>
-                        <div className = 'contactform'>
-                            <div className = 'contacttitle'>Contact Me</div>
-                            <div className = 'contactsubtitle'>jensenal27@gmail.com | (804)-335-6054</div>
-                            <form method="POST" action="send" noValidate="noValidate">
-                                <div className = 'formsection' id='namewrap'>
-                                    <input onChange={onNameChange} type="text" name="name" id="name" required/>
-                                    <label id='namelabel'>Name</label>
-                                    <div className = {nameError === '' ? 'invalid' : 'invalid-show'} id = 'invname'>{nameError}</div>
+            <div className = 'contactcontainer' data-aos='fade-up'>
+                <div className = 'contactwrap'>
+                    <div className ='contactsentform' id = {isSent === true ? 'visible' : 'hidden'}>
+                        Thank You!<br/>Your message has been sent.
+                    </div>
+                    <div className = 'contactform' id = {isSent === false ? 'visible' : 'hidden'}>
+                        <div className = 'contacttitle'>Contact Me</div>
+                        <div className = 'contactsubtitle'><a href='mailto:jensenal27@gmail.com'>jensenal27@gmail.com</a> | (804)-335-6054</div>
+                        <form method="POST" action="send" noValidate="noValidate">
+                            <div className = 'formsection' id='namewrap'>
+                                <input onChange={onNameChange} type="text" name="name" id="name" required/>
+                                <label id='namelabel'>Name</label>
+                                <div className = {nameError === '' ? 'invalid' : 'invalid-show'} id = 'invname'>{nameError}</div>
+                            </div>
+                            <div className = 'formsection' id='companywrap'>
+                                <input onChange={onCompanyChange} type="text" name="company" id="company" required/>
+                                <label id='companylabel'>Company</label>
+                                <div className = {companyError === '' ? 'invalid' : 'invalid-show'} id = 'invcompany'>{companyError}</div>
+                            </div>
+                            <div className = 'formsection' id='emailwrap'>
+                                <input onChange={onEmailChange} type="text" name="email" id="email" required/>
+                                <label>Email Address</label>
+                                <div className = {emailError === '' ? 'invalid' : 'invalid-show'} id = 'invemail'>{emailError}</div>
+                            </div>
+                            <div className = 'formsection' id='phonewrap'>
+                                <input onChange={onPhoneChange} type="text" name="phone" id="phone" required/>
+                                <label>Phone Number</label>
+                            </div>
+                            <div className = 'formsection' id='messagewrap'>
+                                <textarea onChange={onMessageChange} name="message" id="message" required></textarea>
+                                <label>Type your message here...</label>
+                                <div className = {messageError === '' ? 'invalid' : 'invalid-show'} id = 'invmessage'>{messageError}</div>
+                            </div>
+                            <div onClick={onSubmit} className = 'button'>
+                                <div className = 'buttontext' id = {isLoading === true ? 'loading' : ''}>
+                                    {isLoading === true ? 'Working...' : 'Submit'}
                                 </div>
-                                <div className = 'formsection' id='companywrap'>
-                                    <input onChange={onCompanyChange} type="text" name="company" id="company" required/>
-                                    <label id='companylabel'>Company</label>
-                                    <div className = {companyError === '' ? 'invalid' : 'invalid-show'} id = 'invcompany'>{companyError}</div>
-                                </div>
-                                <div className = 'formsection' id='emailwrap'>
-                                    <input onChange={onEmailChange} type="text" name="email" id="email" required/>
-                                    <label>Email Address</label>
-                                    <div className = {emailError === '' ? 'invalid' : 'invalid-show'} id = 'invemail'>{emailError}</div>
-                                </div>
-                                <div className = 'formsection' id='phonewrap'>
-                                    <input onChange={onPhoneChange} type="text" name="phone" id="phone" required/>
-                                    <label>Phone Number</label>
-                                </div>
-                                <div className = 'formsection' id='messagewrap'>
-                                    <textarea onChange={onMessageChange} name="message" id="message" required></textarea>
-                                    <label>Type your message here...</label>
-                                    <div className = {messageError === '' ? 'invalid' : 'invalid-show'} id = 'invmessage'>{messageError}</div>
-                                </div>
-                                <div onClick={onSubmit} className = 'button'>
-                                    <div className = 'buttontext' id = {isLoading === true ? 'loading' : ''}>
-                                        {isLoading === true ? 'Working...' : 'Submit'}
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        </animated.div>
-                )}
-            </animated.div>
-        )}
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </>
     );
 }

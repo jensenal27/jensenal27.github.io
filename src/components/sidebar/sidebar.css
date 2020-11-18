@@ -1,388 +1,61 @@
-.sidebar{
+.sidebar,
+.sidebar-open{
+    height: 100vh;
+    transition: .75s ease-in-out;
     position: fixed;
-    width: 50px;
-    height: 100px;
-    z-index: 1;
-    right: 2%;
-    top: 40%;
+    background-color: #485460;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    display: grid;
+}
+.sidebar{
+    right: -200px;
+}
+.sidebar-open{
+    right: 0px;
+}
+.sidenav-wrap{
+    align-self: center;
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-auto-flow: row;
+    text-align: center;
+    height: 50%;
+    grid-row: 1/2;
+    grid-column: 1/2;
 }
 .sidenav{
-    background-color: #1e272e;
-    border-radius: 50%;
-    border: 2px solid #d2dae2;
-    margin: 10px;
-    padding: 10px 10px;
-    position: relative;
-    display: block;
     cursor: pointer;
+    text-transform: uppercase;
 }
-.sidenavhide{
-    display: none;
+.sidenav:hover{
+    color: #ef5777;
 }
-.sidenav:active {
-    transform: scale(1.1);
-    transition: .5s;
+.menu-close{
+    height: 80px;
+    width: 80px;
+    margin-right: 60px;
+    display: grid;
+    align-items: center;
+    cursor: pointer;
+    z-index: 3;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    align-self: start;
+    justify-self: end;
+    transform: rotate(45deg);
 }
-.sidenav::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: #ef5777;
-    transform: scale(.75);
-    z-index: -1;
+.menu-close-line{
+    background-color: white;
+    height: 2px;
+    grid-row: 1/2;
 }
-.sidenav.active{
-    transform: scale(1.1);
-}
-.slide{
-    width: 2px;
-    height: 0%;
-    position: absolute;
-    top: 14%;
-    left: 47.75%;
-    box-shadow: 0px 0px 4px #ef5777;
-    z-index: -1;
+.menu-close:hover .menu-close-line{
     background-color: #ef5777;
 }
-#slide{
-    width: 2px;
-    height: 0%;
-    position: absolute;
-    top: 14%;
-    left: 47%;
-    box-shadow: 0px 0px 4px #ef5777;
-    z-index: -1;
-    background-color: #ef5777;
-}
-#slide12{
-    animation: onetwo .5s;
-}
-#slide13{
-    animation: onethree .75s;
-}
-#slide14{
-    animation: onefour 1s;
-}
-#slide21{
-    animation: twoone .5s;
-}
-#slide23{
-    animation: twothree .5s;
-}
-#slide24{
-    animation: twofour .75s;
-}
-#slide31{
-    animation: threeone .75s;
-}
-#slide32{
-    animation: threetwo .5s;
-}
-#slide34{
-    animation: threefour .5s;
-}
-#slide41{
-    animation: fourone 1s;
-}
-#slide42{
-    animation: fourtwo .75s;
-}
-#slide43{
-    animation: fourthree .5s;
-}
-@keyframes onetwo {
-    0% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 0);
-        height: 48%;
-    }
-    50% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 1);
-        height: 48%;
-    }
-    50.1% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 1);
-        height: 48%;
-    }
-    100% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 0);
-        height: 48%;
-    }
-}
-@keyframes onethree {
-    0% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 0);
-        height: 98%;
-    }
-    50% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 1);
-        height: 98%;
-    }
-    50.1% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 1);
-        height: 98%;
-    }
-    100% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 0);
-        height: 98%;
-    }
-}
-@keyframes onefour {
-    0% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 0);
-        height: 148%;
-    }
-    50% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 1);
-        height: 148%;
-    }
-    50.1% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 1);
-        height: 148%;
-    }
-    100% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 0);
-        height: 148%;
-    }
-}
-@keyframes twoone {
-    0% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 0);
-        height: 48%;
-    }
-    50% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 1);
-        height: 48%;
-    }
-    50.1% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 1);
-        height: 48%;
-    }
-    100% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 0);
-        height: 48%;
-    }
-}
-@keyframes twothree {
-    0% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 0);
-        height: 48%;
-        top: 55px;
-    }
-    50% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 1);
-        height: 48%;
-        top: 55px;
-    }
-    50.1% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 1);
-        height: 48%;
-        top: 55px;
-    }
-    100% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 0);
-        height: 48%;
-        top: 55px;
-    }
-}
-@keyframes twofour {
-    0% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 0);
-        height: 98%;
-        top: 55px;
-    }
-    50% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 1);
-        height: 98%;
-        top: 55px;
-    }
-    50.1% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 1);
-        height: 98%;
-        top: 55px;
-    }
-    100% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 0);
-        height: 98%;
-        top: 55px;
-    }
-}
-@keyframes threeone {
-    0% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 0);
-        height: 98%;
-    }
-    50% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 1);
-        height: 98%;
-    }
-    50.1% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 1);
-        height: 98%;
-    }
-    100% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 0);
-        height: 98%;
-    }
-}
-@keyframes threetwo {
-    0% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 0);
-        height: 48%;
-        top: 55px;
-    }
-    50% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 1);
-        height: 48%;
-        top: 55px;
-    }
-    50.1% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 1);
-        height: 48%;
-        top: 55px;
-    }
-    100% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 0);
-        height: 48%;
-        top: 55px;
-    }
-}
-@keyframes threefour {
-    0% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 0);
-        height: 48%;
-        top: 110px;
-    }
-    50% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 1);
-        height: 48%;
-        top: 110px;
-    }
-    50.1% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 1);
-        height: 48%;
-        top: 110px;
-    }
-    100% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 0);
-        height: 48%;
-        top: 110px;
-    }
-}
-@keyframes fourone {
-    0% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 0);
-        height: 148%;
-    }
-    50% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 1);
-        height: 148%;
-    }
-    50.1% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 1);
-        height: 148%;
-    }
-    100% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 0);
-        height: 148%;
-    }
-}
-@keyframes fourtwo {
-    0% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 0);
-        height: 98%;
-        top: 55px;
-    }
-    50% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 1);
-        height: 98%;
-        top: 55px;
-    }
-    50.1% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 1);
-        height: 98%;
-        top: 55px;
-    }
-    100% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 0);
-        height: 98%;
-        top: 55px;
-    }
-}
-@keyframes fourthree {
-    0% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 0);
-        height: 48%;
-        top: 110px;
-    }
-    50% {
-        transform-origin: 0% 100%;
-        transform: scale(1, 1);
-        height: 48%;
-        top: 110px;
-    }
-    50.1% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 1);
-        height: 48%;
-        top: 110px;
-    }
-    100% {
-        transform-origin: 0% 0%;
-        transform: scale(1, 0);
-        height: 48%;
-        top: 110px;
+@media all and (min-width: 769px) {
+    .sidebar-open{
+        display: none;
     }
 }

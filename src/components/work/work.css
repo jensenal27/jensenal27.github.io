@@ -1,65 +1,122 @@
-.wrap{
+.work{
     grid-row: 1/2;
     grid-column: 1/2;
-    align-self: center;
-    justify-self: center;
-    width: 80%;
-    height: 50%;
+    height: 100%;
+    width: 100%;
     display: grid;
-    grid-template-columns: 50% 50%;
-    z-index: 2;
 }
-.examplepagetitle{
-    grid-row: 1/2;
-    grid-column: 2/3;
-    font-family: 'oswald';
-    font-size: 3.75rem;
-    font-weight: 600;
-    justify-self: end;
-    align-self: end;
-    margin-bottom: -100px;
-    margin-right: 36px;
-    text-transform: uppercase;
-}
-.exampleleftwrap{
+.workwrap{
     grid-row: 1/2;
     grid-column: 1/2;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 50% 50%;
-}
-.examplerightwrap{
-    grid-row: 1/2;
-    grid-column: 2/3;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 50% 50%;
-}
-.example{
-    width: 80%;
+    width: 60%;
     height: 100%;
     justify-self: center;
     align-self: center;
-    box-shadow: 0 0 4px #1e272e;
-    border-radius: 8px;
-    background: #d2dae2;
     display: grid;
-    grid-template-rows: 50% 10% 30% 10%;
-    transition: transform .5s ease-in-out;
 }
-.container_dark .example{
-    background: #1e272e;
-    box-shadow: 0 0 4px black;
+.examplepagetitle{
+    font-size: 4rem;
+    font-family: 'BeVietnamBold';
+    margin-top: 100px;
+    text-transform: uppercase;
 }
-.example:hover{
-    transform: scale(1.02);
-    transition: transform .5s ease-in-out;
+.example{
+    height: 250px;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 30vw auto;
 }
 .exampleimage{
-    grid-row: 1/2;
     grid-column: 1/2;
-    border-radius: 6px 6px 0 0;
-    transition: .5s;
+    grid-row: 1/4;
+    width: 30vw;
+    height: 15vw;
+    min-height: 250px;
+    border-radius: 2px;
+}
+.imageoverlay{
+    grid-column: 1/2;
+    grid-row: 1/4;
+    background-color: #ef5777;
+    opacity: 0;
+    width: 30vw;
+    height: 15vw;
+    min-height: 250px;
+    transition: opacity .5s;
+    z-index: 2;
+    border-radius: 2px;
+    display: grid;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+.imageoverlay:hover{
+    opacity: .95;
+    cursor: pointer;
+}
+.overlaycontent{
+    margin-left: 40px;
+    font-size: 1.25rem;
+}
+.overlaycontent svg{
+    width: 50px;
+    height: 50px;
+}
+.exampletitle{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    margin-left: 80px;
+    font-size: 1.75rem;
+    text-decoration: none;
+    color: black;
+    align-self: center;
+    z-index: 2;
+}
+.container_dark .exampletitle{
+    color: white;
+}
+.exampletitle:hover{
+    color: #ef5777;
+}
+.exampleinfo{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-left: 80px;
+    font-size: .875rem;
+    align-self: center;
+    z-index: 2;
+}
+.examplesubinfo{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin-left: 80px;
+    align-self: center;
+    z-index: 2;
+}
+.examplesubinfo span{
+    margin-right: 20px;
+    font-size: .875rem;
+}
+.exampleicons{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    justify-self: end;
+    align-self: center;
+    z-index: 2;
+}
+.exampleicons svg{
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+.exampleicons a{
+    color: black;
+}
+.container_dark .exampleicons a{
+    color: white;
+}
+.exampleicons a:hover{
+    color: #ef5777;
 }
 #imageone{
     background: url('../../images/work1.jpg') left top;
@@ -73,256 +130,67 @@
     background: url('../../images/Slide7.jpg') left top;
     background-size: cover;
 }
-#imagefour{
-    background: url('../../images/work41.jpg') left top;
+#imagefive{
+    background: url('../../images/work3.jpg') left top;
     background-size: cover;
 }
-.container_dark #imagefour{
+#imagefour{
     background: url('../../images/work42.jpg') left top;
     background-size: cover;
 }
-.exampletitle{
-    grid-row: 2/3;
-    grid-column: 1/2;
-    font-size: 1.5rem;
-    font-family: 'oswald';
-    margin-top: .3rem;
-    margin-left: 1rem;
-    transition: .5s;
-    color: #1e272e;
+.container_dark #imagefour{
+    background: url('../../images/work41.jpg') left top;
+    background-size: cover;
 }
-.container_dark .exampletitle{
-    color: #d2dae2;
-}
-.exampletitle:hover{
-    color: #ef5777;
-}
-.exampleinfo{
-    grid-row: 3/4;
-    grid-column: 1/2;
-    font-size: 1rem;
-    font-family: 'muli';
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    overflow: hidden;
-    transition: .5s;
-}
-@keyframes delay-overflow {
-    from { overflow: hidden; }
-}
-.exampleicons{
-    grid-row: 4/5;
-    grid-column: 1/2;
-    z-index: 100;
-    width: 100%;
-    height: 100%;
-    align-self: end;
-    background: #1e272e;
-    border-radius: 0% 0% 6px 6px;
-    display: grid;
-    grid-template-columns: 66% 1fr 1fr;
-    margin-bottom: -1px;
-    transition: .5s ease;
-}
-.container_dark .exampleicons{
-    background: #d2dae2;
-    transition: .5s ease;
-}
-.exampleicons svg{
-    height: 100%;
-    width: 100%;
-    cursor: pointer;
-}
-.demobutton{
-    grid-column: 2/3;
-    justify-self: end;
-    align-self: center;
-    color: #d2dae2;
-    height: 60%;
-    width: 60%;
-    display: grid;
-    align-items: center;
-}
-.gitbutton{
-    grid-column: 3/4;
-    justify-self: center;
-    align-self: center;
-    color: #d2dae2;
-    height: 60%;
-    width: 60%;
-    display: grid;
-    align-items: center;
-}
-.container_dark .demobutton,
-.container_dark .gitbutton{
-    color: #1e272e;
-}
-.demobutton:hover,
-.gitbutton:hover{
-    transform: scale(1.2);
-}
-@media all and (min-width: 2500px) {
-    .exampletitle{
-        font-size: 2rem;
-    }
-    .exampleinfo{
-        font-size: 1.25rem;
-    }
-}
-@media all and (max-width: 1500px) {
-    .exampletitle{
-        font-size: 1.2rem;
-    }
-    .exampleinfo{
-        font-size: .8rem;
-    }
-}
-@media all and (max-width: 1024px) {
-    .exampletitle{
-        font-size: 1rem;
-    }
-    .exampleinfo{
-        font-size: .7rem;
-    }
-}
-@media all and (min-width: 768px) {
-    .exampleimage{
-        max-height: 100%;
-        transition: max-height .5s;
-    }
-    .example:hover .exampletitle{
-        transform: translatey(-265%);
-        transition: transform .5s;
-    }
-    .example:hover .exampleinfo{
-        transform: translatey(-85%);
-        transition: transform .5s;
-        overflow: visible;
-        animation: .5s delay-overflow;
-    }
-    .example:hover .exampleimage{
-        max-height: 50%;
-        transition: max-height .5s;
+@media all and (max-width: 1350px) {
+    .workwrap{
+        width: 80%;
     }
 }
 @media all and (max-width: 768px) {
-    .wrap{
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 50% 50%;
-        height: 70%;
-        align-self: center;
-    }
-    .examplepagetitle{
-        grid-column: 1/2;
-        font-family: 'oswald';
-        font-size: 2rem;
-        font-weight: 600;
-        justify-self: start;
-        align-self: start;
-        margin-top: -40px;
-    }
-    .exampleleftwrap{
-        grid-row: 1/2;
-        grid-column: 1/3;
-        grid-template-rows: 50% 50%;
-        grid-template-columns: 100%;
-    }
-    .examplerightwrap{
-        grid-row: 2/3;
-        grid-column: 1/3;
-        grid-template-rows: 50% 50%;
-        grid-template-columns: 100%;
-    }
     .example{
-        width: 100%;
-        height: 91%;
-        align-self: end;
-        grid-template-columns: 25% 60% 15%;
-        grid-template-rows: 28% 60% 22%;
-    }
-    .exampleimage{
-        height: 91%;
-        border-radius: 6px 0 0 6px;
-        grid-row: 1/4;
-        grid-column: 1/2;
-    }
-    .example:hover .exampleimage{
-        display: none;
-    }
-    .exampletitle{
-        align-self: center;
-        font-size: .9rem;
-        grid-row: 1/2;
-        grid-column: 2/3;
-    }
-    .example:hover .exampletitle{
-        display: none;
+        grid-template-columns: 100%;
     }
     .exampleinfo{
-        grid-row: 2/4;
-        grid-column: 2/3;
-        font-size: .7rem;
-        overflow: hidden;
+        grid-column: 1/2;
+        justify-self: end;
+        margin-right: 15px;
+        text-align: end;
+        font-size: .8rem;
     }
-    .example:hover .exampleinfo{
-        grid-row: 1/4;
-        grid-column: 1/3;
-        align-self: center;
-        transform: none;
-        transition: .5s;
+    .exampletitle{
+        grid-column: 1/2;
+        justify-self: end;
+        margin-right: 15px;
+        margin-top: 20px;
+        font-size: 1.5rem;
+    }
+    .examplesubinfo{
+        grid-column: 1/2;
+        justify-self: end;
+        margin-right: 80px;
     }
     .exampleicons{
-        grid-row: 1/4;
-        height: 92%;
-        align-self: start;
-        justify-self: end;
-        border-radius: 0 6px 6px 0;
-        grid-column: 3/4;
-        grid-template-columns: 100%;
-        grid-template-rows: 50% 50%;
-        margin-bottom: 0px;
-        margin-right: -1px;
-    }
-    .demobutton,
-    .gitbutton{
         grid-column: 1/2;
-        justify-self: center;
-        width: 40%;
-    }
-    .gitbutton{
-        grid-row: 2/3;
-    }
-    #imagethree{
-        background: url('../../images/Slide5.JPG') center center;
-        background-size: cover;
-    }
-    #imagefour{
-        background: url('../../images/work43.jpg') center top;
-        background-size: cover;
-    }
-    .container_dark #imagefour{
-        background: url('../../images/work44.jpg') center top;
-        background-size: cover;
-    }
-}
-@media all and (max-width: 480px) {
-    .examplepagetitle{
-        font-size: 1.5rem;
-        margin-top: -30px;
-        margin-left: 24px;
-    }
-    .exampletitle{
-        font-size: 1rem;
-    }
-    .example{
-        height: 120px;
-        width: 250px;
+        justify-self: end;
     }
     .exampleimage{
-        height: 120px;
+        width: 100%;
+        opacity: .15;
     }
-    .exampleinfo{
-        font-size: .7rem;
+    .imageoverlay{
+        width: 100%;
+        display: none;
+    }
+    .examplepagetitle{
+        font-size: 3rem;
+    }
+    .examplesubinfo span{
+        margin-right: 20px;
+        font-size: .8rem;
+    }
+    .exampleicons svg{
+        width: 25px;
+        height: 25px;
     }
 }

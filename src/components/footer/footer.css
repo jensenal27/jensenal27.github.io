@@ -1,8 +1,7 @@
 .footer{
     position: fixed;
-    bottom: 2%;
-    left: 2%;
-    opacity: 0;
+    bottom: 21px;
+    left: 21px;
     transition: .5s;
 }
 .footernav{

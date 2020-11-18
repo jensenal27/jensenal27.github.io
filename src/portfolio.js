@@ -1,80 +1,45 @@
 import React, {useState, useEffect} from 'react';
 import {useInView} from "react-intersection-observer";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './style.css';
 import Header from './components/header/header';
-import Footer from './components/footer/footer';
 import Sidebar from './components/sidebar/sidebar';
-import ThemeToggle from './components/themetoggle/themetoggle';
+import Footer from './components/footer/footer';
 import About from './components/about/about';
 import Work from './components/work/work';
-import Resume from './components/resume/resume';
 import Contact from './components/contact/contact';
 
 const Portfolio = () => {
 
     const section = document.getElementsByClassName('section');
-    const slider = document.getElementsByClassName('slide');
 
-    const [theme, setTheme] = useState('light');
-    const [showOnLanding, setShowOnLanding] = useState(false);
+    const [theme, setTheme] = useState('dark');
+    const [menu, setMenu] = useState(false);
+
+    const toggleMenu = () => {
+      menu === false ? setMenu(true) : setMenu(false);
+    }
+
+    const hideMenu = () => {
+        setMenu(false);
+    }
     
     const [refAbout, aboutInView] = useInView({threshold: .8});
     const [refWork, workInView] = useInView({threshold: .45});
-    const [refResume, resumeInView] = useInView({threshold: .45});
     const [refContact, contactInView] = useInView({threshold: .45});
 
-    const animSliderOne = () => {
-        if (workInView === true) {
-            slider[0].id = 'slide21';
-        } else if (resumeInView === true) {
-            slider[0].id = 'slide31';
-        } else if (contactInView === true) {
-            slider[0].id = 'slide41';
-        }
-    }
-    const animSliderTwo = () => {
-        if (aboutInView === true) {
-            slider[0].id = 'slide12';
-        } else if (resumeInView === true) {
-            slider[0].id = 'slide32';
-        } else if (contactInView === true) {
-            slider[0].id = 'slide42';
-        }
-    }
-    const animSliderThree = () => {
-        if (aboutInView === true) {
-            slider[0].id = 'slide13';
-        } else if (workInView === true) {
-            slider[0].id = 'slide23';
-        } else if (contactInView === true) {
-            slider[0].id = 'slide43';
-        }
-    }
-    const animSliderFour = () => {
-        if (aboutInView === true) {
-            slider[0].id = 'slide14';
-        } else if (workInView === true) {
-            slider[0].id = 'slide24';
-        } else if (resumeInView === true) {
-            slider[0].id = 'slide34';
-        }
-    }
-
     const scrollOne = () => {
-        animSliderOne();
         section[0].scrollIntoView();
+        hideMenu();
     }
     const scrollTwo = () => {
-        animSliderTwo();
         section[1].scrollIntoView();
+        hideMenu();
     }
     const scrollThree = () => {
-        animSliderThree();
         section[2].scrollIntoView();
-    }
-    const scrollFour = () => {
-        animSliderFour();
-        section[3].scrollIntoView();
+        hideMenu();
     }
 
     const toggleTheme = () => {
@@ -82,38 +47,25 @@ const Portfolio = () => {
     }
 
     useEffect(() => {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            setTheme('dark');
-        } else {
-            setTheme('light');
-        }
-    }, []);
-
-    useEffect(() => {
-        setShowOnLanding(true);
+        AOS.init();
     }, []);
 
     return (
         <div className = {theme === 'light' ? 'container' : 'container_dark'}>
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme}/>
-            <Footer showOnLanding={showOnLanding} aboutInView={aboutInView}/>
+            <Footer/>
             <Header
-            showOnLanding={showOnLanding}
-            scrollOne={scrollOne} scrollTwo={scrollTwo} scrollThree={scrollThree} scrollFour={scrollFour}
-            aboutInView={aboutInView} workInView={workInView} resumeInView={resumeInView} contactInView={contactInView}/>
-            <Sidebar 
-            scrollOne={scrollOne} scrollTwo={scrollTwo} scrollThree={scrollThree} scrollFour={scrollFour}
-            aboutInView={aboutInView} workInView={workInView} resumeInView={resumeInView} contactInView={contactInView}/>
-            <div className = 'section' id='one' ref={refAbout}>
-                <About inView={aboutInView}/>
+            theme={theme} toggleTheme={toggleTheme} menu={menu} toggleMenu={toggleMenu}
+            scrollOne={scrollOne} scrollTwo={scrollTwo} scrollThree={scrollThree}
+            aboutInView={aboutInView} workInView={workInView} contactInView={contactInView}/>
+            <Sidebar menu={menu} toggleMenu={toggleMenu}
+            scrollOne={scrollOne} scrollTwo={scrollTwo} scrollThree={scrollThree}/>
+            <div className = 'section' id='one' ref={refAbout} onClick={hideMenu}>
+                <About inView={aboutInView} scrollTwo={scrollTwo}/>
             </div>
-            <div className = 'section' id='two' ref={refWork}>
+            <div className = 'section' id='two' ref={refWork} onClick={hideMenu}>
                 <Work inView={workInView}/>
             </div>
-            <div className = 'section' id='three' ref={refResume}>
-                <Resume inView={resumeInView}/>
-            </div>
-            <div className = 'section' id='four' ref={refContact}>
+            <div className = 'section' id='four' ref={refContact} onClick={hideMenu}>
                 <Contact inView={contactInView}/>
             </div>
         </div>

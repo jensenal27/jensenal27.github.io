@@ -1,22 +1,19 @@
 import React from 'react';
 import './footer.css';
-import {FaGithub} from 'react-icons/fa';
-import {FaLinkedinIn} from 'react-icons/fa';
+import { FiGithub } from "react-icons/fi";
+import { FiLinkedin } from "react-icons/fi";
 
-const Footer = ({showOnLanding, aboutInView}) => {
-
-    if (showOnLanding === true){
-        return (
-            <div className = 'footer' id={aboutInView === false ? 'visible' : ''}>
-                <div className='footernav'>
-                    <a href='https://www.linkedin.com/in/anders-jensen-443295165' target='__blank'><FaLinkedinIn/></a>
-                </div>
-                <div className='footernav'>
-                    <a href='https://github.com/jensenal27' target='__blank'><FaGithub/></a>
-                </div>
+const Footer = () => {
+    return (
+        <div className = 'footer' data-aos='fade-in' data-aos-delay='1000'>
+            <div className='footernav'>
+                <a href='https://www.linkedin.com/in/anders-jensen-443295165' target='__blank'><FiLinkedin/></a>
             </div>
-        );
-    } else {return null;}
+            <div className='footernav'>
+                <a href='https://github.com/jensenal27' target='__blank'><FiGithub/></a>
+            </div>
+        </div>
+    );
 }
 
 export default Footer;
