@@ -64,28 +64,28 @@ const Contact = ({inView}) => {
     const onSubmit = () => {
         const isValid = validate();
         if (isValid) {
-            setIsSent(true);
-            // setIsLoading(true);
-            // fetch('https://agile-plains-44092.herokuapp.com/send', {
-            //     method: 'post',
-            //     headers: {'Content-Type': 'application/json'},
-            //     body: JSON.stringify({
-            //         name: name,
-            //         company: company,
-            //         email: email,
-            //         phone: phone,
-            //         message: message
-            //     })
-            // })
-            // .then(function(response) {
-            //     if (response.status !== 200) {
-            //         setIsLoading(false);
-            //         throw new Error('Not 200 Response');
-            //     } else {
-            //         setIsLoading(false);
-            //         setIsSent(true);
-            //     }
-            // }).catch(err => console.log(err));
+            // setIsSent(true);
+            setIsLoading(true);
+            fetch('https://agile-plains-44092.herokuapp.com/send', {
+                method: 'post',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    name: name,
+                    company: company,
+                    email: email,
+                    phone: phone,
+                    message: message
+                })
+            })
+            .then(function(response) {
+                if (response.status !== 200) {
+                    setIsLoading(false);
+                    throw new Error('Not 200 Response');
+                } else {
+                    setIsLoading(false);
+                    setIsSent(true);
+                }
+            }).catch(err => console.log(err));
         }
     }
     
