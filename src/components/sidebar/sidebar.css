@@ -3,11 +3,15 @@
     height: 100vh;
     transition: .75s ease-in-out;
     position: fixed;
-    background-color: #485460;
+    background-color: #A6B6C5;
     z-index: 2;
     top: 0;
     bottom: 0;
     display: grid;
+}
+.container_dark .sidebar,
+.container_dark .sidebar-open{
+    background-color: #0A1720;
 }
 .sidebar{
     right: -200px;
@@ -47,9 +51,12 @@
     transform: rotate(45deg);
 }
 .menu-close-line{
-    background-color: white;
+    background-color: black;
     height: 2px;
     grid-row: 1/2;
+}
+.container_dark .menu-close-line{
+    background-color: white;
 }
 .menu-close:hover .menu-close-line{
     background-color: #ef5777;

@@ -71,8 +71,11 @@
     z-index: 3;
 }
 .menu-line{
-    background-color: white;
+    background-color: black;
     height: 2px;
+}
+.container_dark .menu-line{
+    background-color: white;
 }
 .menu:hover .menu-line{
     background-color: #ef5777;
