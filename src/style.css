@@ -27,14 +27,14 @@
     color: black;
     display: grid;
     transition: all .25s;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .container_dark{
     background-color: #1e272e;
     color: white;
     display: grid;
     transition: all .25s;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .container video{
     width: 100%;
@@ -47,7 +47,9 @@
 }
 #two{
     height: 200vh;
+    min-height: 1800px;
 }
 #four{
     height: 100vh;
+    min-height: 800px;
 }
