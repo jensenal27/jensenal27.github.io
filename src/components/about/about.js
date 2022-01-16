@@ -13,7 +13,7 @@ const About = ({scrollTwo}) => {
                     Anders Jensen
                 </div>
                 <div className = 'about_subtitle' data-aos='fade-up' data-aos-delay='600'>
-                    I make web applications with React.
+                    I build web applications with React and Angular.
                 </div>
                 <div className = 'about_info' data-aos='fade-up' data-aos-delay='700'>
                     I'm a web developer and programmer based in Washington, DC.

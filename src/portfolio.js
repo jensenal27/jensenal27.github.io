@@ -26,8 +26,8 @@ const Portfolio = () => {
     }
     
     const [refAbout, aboutInView] = useInView({threshold: .8});
-    const [refWork, workInView] = useInView({threshold: .45});
-    const [refContact, contactInView] = useInView({threshold: .45});
+    const [refWork, workInView] = useInView({threshold: .1});
+    const [refContact, contactInView] = useInView({threshold: .8});
 
     const scrollOne = () => {
         section[0].scrollIntoView();
@@ -57,7 +57,7 @@ const Portfolio = () => {
             theme={theme} toggleTheme={toggleTheme} menu={menu} toggleMenu={toggleMenu}
             scrollOne={scrollOne} scrollTwo={scrollTwo} scrollThree={scrollThree}
             aboutInView={aboutInView} workInView={workInView} contactInView={contactInView}/>
-            <Sidebar menu={menu} toggleMenu={toggleMenu}
+            <Sidebar theme={theme} toggleTheme={toggleTheme} menu={menu} toggleMenu={toggleMenu}
             scrollOne={scrollOne} scrollTwo={scrollTwo} scrollThree={scrollThree}/>
             <div className = 'section' id='one' ref={refAbout} onClick={hideMenu}>
                 <About inView={aboutInView} scrollTwo={scrollTwo}/>

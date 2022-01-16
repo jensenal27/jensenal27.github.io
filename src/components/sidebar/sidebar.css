@@ -61,6 +61,9 @@
 .menu-close:hover .menu-close-line{
     background-color: #ef5777;
 }
+.sidenav-wrap .themetoggle {
+    justify-self: center;
+}
 @media all and (min-width: 769px) {
     .sidebar-open{
         display: none;

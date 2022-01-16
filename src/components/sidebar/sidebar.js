@@ -1,7 +1,9 @@
 import React from 'react';
 import './sidebar.css';
+import { FiSun } from "react-icons/fi";
+import { FiMoon } from "react-icons/fi";
 
-const Sidebar = ({scrollOne, scrollTwo, scrollThree, menu, toggleMenu}) => {
+const Sidebar = ({scrollOne, scrollTwo, scrollThree, menu, toggleMenu, theme, toggleTheme}) => {
 
     return (
         <div className = {menu === false ? 'sidebar' : 'sidebar-open'} style = {menu === false ? {width: '0px'} : {width: 'min(66vw, 400px)'}}>
@@ -14,6 +16,10 @@ const Sidebar = ({scrollOne, scrollTwo, scrollThree, menu, toggleMenu}) => {
                 <div className = 'sidenav' onClick={scrollTwo}>Work</div>
                 <div className = 'sidenav' onClick={scrollThree}>Contact</div>
                 <div className = 'sidenav'><a href='/AJensenResume.pdf' target='__blank' className = 'downbutton'>Resume</a></div>
+                {( theme === 'light' ?
+                    <div className = 'themetoggle' onClick={toggleTheme}><FiMoon/></div> :
+                    <div className = 'themetoggle' onClick={toggleTheme}><FiSun/></div>
+                )}
             </div>
         </div>
     );

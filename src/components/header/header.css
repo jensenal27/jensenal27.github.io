@@ -89,7 +89,7 @@
     .nav{
         display: none;
     }
-    .themetoggle{
+    .headerwrap .themetoggle{
         display: none;
     }
 }

@@ -19,18 +19,26 @@
     font-size: 1rem;
 }
 .about_title{
-    font-size: 3.75rem;
+    font-size: 4rem;
     font-family: 'BeVietnamBold'; 
 }
 .about_subtitle{
-    font-size: 3.75rem;
+    font-size: 3rem;
     font-family: 'BeVietnamBold';
-    margin-top: -20px;
+    margin-top: 0px;
+    color: #808e9b;
+    line-height: 100%;
 }
 .about_info{
     font-size: 1.5rem;
-    margin-top: 11px;
+    margin-top: 21px;
+    color: #808e9b;
 }
+.container .about_subtitle,
+.container .about_info{
+    color: #485460;
+}
+
 .about_button{
     color: #ef5777;
     font-size: 1rem;

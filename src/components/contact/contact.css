@@ -25,10 +25,12 @@
     width: 100%;
     height: 100%;
     font-size: 3.75rem;
-    background-color: #1e272e;
+    background-color: #d2dae2;
     text-align: center;
     align-items: center;
-    transition: .75s ease;
+}
+.container_dark .contactsentform{
+    background-color: #1e272e;
 }
 #visible{
     display: grid;
